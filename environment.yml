@@ -1,5 +1,6 @@
 name: cervical
 channels:
+  - r
   - conda-forge
   - defaults
 dependencies:
@@ -28,7 +29,7 @@ dependencies:
   - bwidget=1.9.14
   - bzip2=1.0.8
   - c-ares=1.18.1
-  - ca-certificates=2022.12.7
+  - ca-certificates=2023.01.10
   - cached-property=1.5.2
   - cached_property=1.5.2
   - cachetools=5.3.0
@@ -202,6 +203,7 @@ dependencies:
   - platformdirs=3.0.0
   - ply=3.11
   - pooch=1.6.0
+  - prince-factor-analysis=0.7.1
   - prompt-toolkit=3.0.36
   - protobuf=4.21.12
   - psutil=5.9.4
@@ -266,6 +268,7 @@ dependencies:
   - r-ellipse=0.4.3
   - r-ellipsis=0.3.2
   - r-emmeans=1.8.4_1
+  - r-essentials=0.1.0
   - r-estimability=1.4.1
   - r-evaluate=0.20
   - r-factoextra=1.0.7
