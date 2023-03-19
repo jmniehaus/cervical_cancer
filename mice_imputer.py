@@ -15,13 +15,15 @@ class mice_imputer(BaseEstimator, TransformerMixin):
             variable_parameters = None, 
             mean_match_scheme = None,
             imputation_order = "ascending",
-            mice_iterations = 7, 
+            mice_iterations = 10, 
             lgb_objective = "regression",
             lgb_iterations = 100,
             lgb_learning_rate = .1,
             lgb_max_depth = 3,
             lgb_cat_smooth = 10,
-            lgb_feature_fraction_bynode = 1.0
+            lgb_num_leaves = 31,
+            lgb_feature_fraction_bynode = 1.0,
+            lgb_min_data_in_leaf = 20
             ):
         
         self.variable_parameters = variable_parameters 
@@ -34,6 +36,8 @@ class mice_imputer(BaseEstimator, TransformerMixin):
         self.lgb_feature_fraction_bynode = lgb_feature_fraction_bynode
         self.imputation_order = imputation_order
         self.lgb_objective = lgb_objective
+        self.lgb_num_leaves = lgb_num_leaves
+        self.lgb_min_data_in_leaf = lgb_min_data_in_leaf
 
     def fit(self, X, y=None):
         """ 
@@ -56,7 +60,9 @@ class mice_imputer(BaseEstimator, TransformerMixin):
             max_depth = self.lgb_max_depth,
             cat_smooth = self.lgb_cat_smooth,
             feature_fraction_bynode = self.lgb_feature_fraction_bynode, 
-            objective = self.lgb_objective
+            objective = self.lgb_objective,
+            num_leaves = self.lgb_num_leaves,
+            min_data_in_leaf = self.lgb_min_data_in_leaf
         )
 
         return (self)
