@@ -1,9 +1,7 @@
 # Cervical Cancer Biopsy Model
 
-_This is still under development_. This readme will be updated upon completion of the analysis. 
+This is the code to accompany my webpage post on cervical cancer risk classification, available [here](https://jmniehaus.github.io/cervical.html). 
 
-In general, this project focuses on diagnosing cervical cancer in women using the UCI Machine Learning Repository's Cervical Cancer Risk Factors 
-dataset. My ultimate goals are to gain more experience utilizing the various tools for machine learning in Python, as well as more experience solving
-common problems encountered in predictive modeling for healthcare data.  
+The top-level dependencies are contained in the `environment.yml` file; if desiring to reproduce any analyses, I highly suggest creating a conda environment from this file. The analysis will most likely not work if using past/future versions of the associated packages.
 
 
